@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sugar Glider Fun Facts</title>
-<style>
-body {
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #f0f8ff; 
-}
-
-.container {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Facts</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f0f8ff;
+    }
+    .container {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <h1>Sugar Glider Fun Facts</h1>
-    <p id="fact-display"></p> 
+    <p id="fact-display"></p>
     <button onclick="getNewFact()">New Fact</button>
   </div>
 
@@ -54,18 +52,19 @@ button:hover {
       "They have sharp claws that help them climb trees with ease. They can even rotate their hind feet 180 degrees!",
       "Sugar gliders have long, brush-tipped tongues that are perfect for lapping up nectar and sap from trees.",
       "There are several different species of sugar gliders, each with their own unique markings and characteristics.",
-      "Sugar gliders can make fun and rewarding pets, but they require a lot of care and attention. They need a large cage, special diet, and plenty of social interaction."
+      "Sugar gliders can make fun and rewarding pets, but they require a lot of care and attention. They need a large cage, a special diet, and plenty of social interaction." 
     ];
 
     const factDisplay = document.getElementById('fact-display');
 
     function getNewFact() {
       const randomIndex = Math.floor(Math.random() * facts.length);
-      factDisplay.innerText = facts[randomIndex]; 
+      factDisplay.innerText = facts[randomIndex];
     }
 
     // Display a fact on page load
-    getNewFact();
+    getNewFact(); 
   </script>
 </body>
 </html>
+
