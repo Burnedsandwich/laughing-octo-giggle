@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugar Glider Fun Facts</title>
-    <style>
-        /* Paste all your CSS code here */
+<title>Sugar Glider Fun Facts</title>
+<style>
 body {
   font-family: sans-serif;
   display: flex;
@@ -13,125 +10,62 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #e0d8c8; /* Light Brownish Gray */
+  background-color: #f0f8ff; 
 }
 
 .container {
-  background-color: #ffffff; /* White */
+  background-color: #fff;
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   text-align: center;
 }
-        .eye {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #fff;
-  margin: 0 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.eye::before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
 
 button {
-  background-color: #5c403b; /* Dark Brown */
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 12px 20px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 button:hover {
   background-color: #0056b3;
 }
-.eyes {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.eye {
-  width: 100px;
-  height: 100px;
-  background-color: #000;
-  border-radius: 50%;
-  margin: 0 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.eyelid {
-  width: 100%;
-  height: 50%;
-  background-color: #e0d8c8;
-  position: absolute;
-  bottom: 0;
-  animation: blinkBottom 3s infinite;
-}
-
-@keyframes blinkBottom {
-  0%, 100% { bottom: -25px; height: 50px; }
-  50% { bottom: 0; height: 0;}
-}
-
-    </style>
+</style>
 </head>
 <body>
-    <div class="container">
-      <h1>Sugar Glider Fun Facts</h1>
-      <div class="eyes">
-        <div class="eye">
-          <div class="eyelid"></div>
-        </div>
-        <div class="eye">
-          <div class="eyelid"></div>
-        </div>
-      </div>
-      <p id="fact-display"></p>
-      <button onclick="getNewFact()">New Fact</button>
-    </div>
-    
-    <script>
-const facts = [
-  "They don't actually fly, they glide! A membrane of skin stretched between their wrists and ankles allows them to soar through the air for impressive distances.",
-  "Sugar gliders are nocturnal, meaning they are most active at night. Their large eyes help them see in the dark.",
-  "Their name comes from their love of sugary foods like sap and nectar. They also enjoy insects and small animals.",
-  "Sugar gliders are very social animals and live in groups called colonies. They communicate with each other using a variety of chirps, barks, and hisses.",
-  "Baby sugar gliders, called joeys, are born tiny and underdeveloped. They crawl into their mother's pouch to continue growing for several months.",
-  "Sugar gliders use their urine to mark their territory and communicate with other gliders.",
-  "They have sharp claws that help them climb trees with ease. They can even rotate their hind feet 180 degrees!",
-  "Sugar gliders have long, brush-tipped tongues that are perfect for lapping up nectar and sap from trees.",
-  "There are several different species of sugar gliders, each with their own unique markings and characteristics.",
-  "Sugar gliders can make fun and rewarding pets, but they require a lot of care and attention. They need a large cage, a special diet, and plenty of social interaction."
-];
+  <div class="container">
+    <h1>Sugar Glider Fun Facts</h1>
+    <p id="fact-display"></p> 
+    <button onclick="getNewFact()">New Fact</button>
+  </div>
 
-const factDisplay = document.getElementById('fact-display');
+  <script>
+    const facts = [
+      "They don't actually fly, they glide! A membrane of skin stretched between their wrists and ankles allows them to soar through the air for impressive distances.",
+      "Sugar gliders are nocturnal, meaning they are most active at night. Their large eyes help them see in the dark.",
+      "Their name comes from their love of sugary foods like sap and nectar. They also enjoy insects and small animals.",
+      "Sugar gliders are very social animals and live in groups called colonies. They communicate with each other using a variety of chirps, barks, and hisses.",
+      "Baby sugar gliders, called joeys, are born tiny and underdeveloped. They crawl into their mother's pouch to continue growing for several months.",
+      "Sugar gliders use their urine to mark their territory and communicate with other gliders.",
+      "They have sharp claws that help them climb trees with ease. They can even rotate their hind feet 180 degrees!",
+      "Sugar gliders have long, brush-tipped tongues that are perfect for lapping up nectar and sap from trees.",
+      "There are several different species of sugar gliders, each with their own unique markings and characteristics.",
+      "Sugar gliders can make fun and rewarding pets, but they require a lot of care and attention. They need a large cage, special diet, and plenty of social interaction."
+    ];
 
-function getNewFact() {
-  const randomIndex = Math.floor(Math.random() * facts.length);
-  factDisplay.innerText = facts[randomIndex];
-}
+    const factDisplay = document.getElementById('fact-display');
 
-// Display a fact on page load
-getNewFact();
-    </script>
+    function getNewFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factDisplay.innerText = facts[randomIndex]; 
+    }
+
+    // Display a fact on page load
+    getNewFact();
+  </script>
 </body>
 </html>
-
